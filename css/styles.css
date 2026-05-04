@@ -386,10 +386,46 @@ h2::after {
 footer {
     background-color: var(--olive-dark);
     color: var(--white);
-    text-align: center;
-    padding: 2.5rem;
+    padding: 2.5rem 5%;
     font-family: var(--font-heading);
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-content > p {
     font-size: 1.1rem;
+}
+
+.support-contact {
+    text-align: right;
+    font-family: var(--font-body);
+}
+
+.support-contact p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    opacity: 0.9;
+}
+
+.support-btn {
+    border-color: var(--white);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.support-btn:hover {
+    background-color: var(--white);
+    color: var(--olive-dark);
+    border-color: var(--white);
 }
 
 /* ANIMATIONS */
@@ -402,39 +438,6 @@ footer {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
-}
-
-.whatsapp-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-    color: white;
-}
-
-.whatsapp-button svg {
-    height: 34px;
-    width: auto;
-    display: block;
-    margin-bottom: 2px; /* slight vertical adjust to center visually */
-    margin-right: 1px;
 }
 
 /* RESPONSIVE */
@@ -539,16 +542,14 @@ footer {
         padding: 1.5rem !important;
     }
 
-    /* WhatsApp Button Mobile */
-    .whatsapp-button {
-        bottom: 15px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
+    /* Footer Mobile */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
     }
-    .whatsapp-button svg {
-        height: 28px;
-        width: auto;
+    .support-contact {
+        text-align: center;
     }
 }
 
